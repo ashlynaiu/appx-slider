@@ -1,4 +1,18 @@
 /////////////////
+/////Variables/////
+///////////////
+$desktop-padding: 20px
+$frame-desktop: 820px
+$text-color-standard: #465046
+$secondary-text: #745486
+$main-link-color: #735991
+$background-color: #FFF
+$break-large: 1200px
+$break-medium: 964px
+$break-small: 728px
+$background-color: rgba(white, 0.6)
+
+/////////////////
 /////Resets/////
 ///////////////
 
@@ -14,7 +28,7 @@
 html, body
   background: white
   height: 100%
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
+  font-family: "-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol""
   color: #333333
 
 input, select, textarea, button, a
@@ -34,15 +48,82 @@ a
 	&:hover
 		text-decoration: none
 
+h3
+	font-size: 20px
+	font-weight: bold
+	padding-bottom: 8px
 p
 	font-size: 16px
 	line-height: 24px
 	font-weight: 300
 
 table, button
-  color: #333333
+	color: #333333
 
 .app
-  width: 70%
-  margin: 0 auto
-  padding-top: 80px
+	margin: 0 auto
+	padding-top: 80px
+
+	//Up to small screen
+	@media only screen and (max-width: $break-medium - 1)
+		width: $break-small
+
+	//above small screen
+	@media only screen and (min-width: $break-medium)
+		width: $break-medium
+
+	//above medium screens
+	@media only screen and (min-width: $break-large)
+		width: $break-large
+
+.proto
+	padding-bottom: 128px
+
+/////////////////////
+/////Carousel 1/////
+///////////////////
+.carousel
+	display: flex
+	overflow-x: scroll
+	padding: 12px 8px 24px 8px
+
+	&::-webkit-scrollbar
+		width: 7px
+		height: 6px
+
+	&::-webkit-scrollbar-track
+		margin: 0 20px
+		background-color: #eee
+		border-radius: 10px
+		-webkit-box-shadow: inset 0 0 5px #eee
+		box-shadow: inset 0 0 5px #eee
+
+	&::-webkit-scrollbar-thumb
+		background: #0070D2
+		border-radius: 10px
+
+.carousel-container
+	margin-right: 32px
+	max-width: 500px
+	border-radius: 16px
+	flex: 0 0 50%
+	box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08)
+	background: #fff
+	transition: transform .2s
+
+	&:last-child
+		margin: 0
+	&:hover
+		transform: translateY(-10px)
+	img
+		width: auto
+		margin-bottom: 16px
+		border-radius: 16px 16px 0 0
+		border-bottom: 1px solid #E5E5E5
+
+.img-text
+	padding: 0 24px 24px 24px
+
+/////////////////////
+/////Carousel 2/////
+///////////////////
