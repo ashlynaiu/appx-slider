@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Carousel from './components/carousel';
 import Carousel2 from './components/carousel2';
+import Carousel1 from './components/carousel1';
 
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="app">
         <div className="proto">
-          <Carousel />
+          <Carousel1 />
         </div>
         <div className="proto">
           <Carousel2 />

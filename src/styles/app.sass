@@ -12,6 +12,8 @@ $break-medium: 964px
 $break-small: 728px
 $background-color: rgba(white, 0.6)
 
+$grid-size: 500px
+$gap-size: 4rem
 /////////////////
 /////Resets/////
 ///////////////
@@ -79,13 +81,11 @@ table, button
 .proto
 	padding-bottom: 128px
 
-/////////////////////
-/////Carousel 1/////
-///////////////////
-.carousel
-	display: flex
+/////////////////////////////
+/////Carousel Universal/////
+///////////////////////////
+.carousel-u
 	overflow-x: scroll
-	padding: 12px 8px 24px 8px
 
 	&::-webkit-scrollbar
 		width: 7px
@@ -102,7 +102,17 @@ table, button
 		background: #0070D2
 		border-radius: 10px
 
-.carousel-container
+.img-text
+	padding: 0 24px 24px 24px
+
+/////////////////////
+/////Carousel 1/////
+///////////////////
+.carousel1
+	display: flex
+	padding: 12px 8px 24px 8px
+
+.carousel-container1
 	margin-right: 32px
 	max-width: 500px
 	border-radius: 16px
@@ -121,9 +131,72 @@ table, button
 		border-radius: 16px 16px 0 0
 		border-bottom: 1px solid #E5E5E5
 
-.img-text
-	padding: 0 24px 24px 24px
-
 /////////////////////
 /////Carousel 2/////
 ///////////////////
+.carousel2
+	display: grid
+	padding-top: 12px
+	grid-auto-flow: column
+	gap: calc(#{$gap-size} / 2) 
+	margin: 0
+	scroll-behavior: smooth
+	overscroll-behavior-inline: contain
+	padding-inline: $gap-size
+	scroll-padding-inline: $gap-size
+	padding-block-end: calc(#{$gap-size} / 2)
+	scroll-snap-type: inline mandatory
+
+	figure
+		scroll-snap-align: start
+
+	li
+		display: inline-block
+
+		&:last-of-type figure
+			position: relative
+
+			&::after
+				content: ""
+				position: absolute
+				inline-size: $gap-size
+				block-size: 100%
+				inset-block-start: 0
+				inset-inline-end: calc(#{$gap-size} * -1)
+
+.carousel-container2
+	width: 500px
+	border-radius: 16px
+	box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08)
+	background: #fff
+	transition: transform .2s
+
+	&:last-child
+		margin: 0
+
+	&:hover
+		transform: translateY(-10px)
+
+	img
+		inline-size: $grid-size
+    block-size: $grid-size
+		margin-bottom: 16px
+		border-radius: 16px 16px 0 0
+		border-bottom: 1px solid #E5E5E5
+		inline-size: 100%
+		block-size: 100%
+		object-fit: cover
+
+	figcaption
+		padding: 0 24px 24px 24px
+
+	span
+		display: block
+		&.title
+			font-size: 20px
+			font-weight: bold
+			padding-bottom: 8px
+		&.caption
+			font-size: 16px
+			line-height: 24px
+			font-weight: 300

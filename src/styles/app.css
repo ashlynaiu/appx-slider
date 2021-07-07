@@ -64,27 +64,32 @@ table, button {
 .proto {
   padding-bottom: 128px; }
 
-.carousel {
-  display: flex;
-  overflow-x: scroll;
-  padding: 12px 8px 24px 8px; }
+.carousel-u {
+  overflow-x: scroll; }
 
-.carousel::-webkit-scrollbar {
+.carousel-u::-webkit-scrollbar {
   width: 7px;
   height: 6px; }
 
-.carousel::-webkit-scrollbar-track {
+.carousel-u::-webkit-scrollbar-track {
   margin: 0 20px;
   background-color: #eee;
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 5px #eee;
   box-shadow: inset 0 0 5px #eee; }
 
-.carousel::-webkit-scrollbar-thumb {
+.carousel-u::-webkit-scrollbar-thumb {
   background: #0070D2;
   border-radius: 10px; }
 
-.carousel-container {
+.img-text {
+  padding: 0 24px 24px 24px; }
+
+.carousel1 {
+  display: flex;
+  padding: 12px 8px 24px 8px; }
+
+.carousel-container1 {
   margin-right: 32px;
   max-width: 500px;
   border-radius: 16px;
@@ -93,17 +98,83 @@ table, button {
   background: #fff;
   transition: transform .2s; }
 
-.carousel-container:last-child {
+.carousel-container1:last-child {
   margin: 0; }
 
-.carousel-container:hover {
+.carousel-container1:hover {
   transform: translateY(-10px); }
 
-.carousel-container img {
+.carousel-container1 img {
   width: auto;
   margin-bottom: 16px;
   border-radius: 16px 16px 0 0;
   border-bottom: 1px solid #E5E5E5; }
 
-.img-text {
+.carousel2 {
+  display: grid;
+  padding-top: 12px;
+  grid-auto-flow: column;
+  gap: calc(4rem / 2);
+  margin: 0;
+  scroll-behavior: smooth;
+  overscroll-behavior-inline: contain;
+  padding-inline: 4rem;
+  scroll-padding-inline: 4rem;
+  padding-block-end: calc(4rem / 2);
+  scroll-snap-type: inline mandatory; }
+
+.carousel2 figure {
+  scroll-snap-align: start; }
+
+.carousel2 li {
+  display: inline-block; }
+
+.carousel2 li:last-of-type figure {
+  position: relative; }
+
+.carousel2 li:last-of-type figure::after {
+  content: "";
+  position: absolute;
+  inline-size: 4rem;
+  block-size: 100%;
+  inset-block-start: 0;
+  inset-inline-end: calc(4rem * -1); }
+
+.carousel-container2 {
+  width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08);
+  background: #fff;
+  transition: transform .2s; }
+
+.carousel-container2:last-child {
+  margin: 0; }
+
+.carousel-container2:hover {
+  transform: translateY(-10px); }
+
+.carousel-container2 img {
+  inline-size: 500px;
+  inline-size-block-size: 500px;
+  margin-bottom: 16px;
+  border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid #E5E5E5;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover; }
+
+.carousel-container2 figcaption {
   padding: 0 24px 24px 24px; }
+
+.carousel-container2 span {
+  display: block; }
+
+.carousel-container2 span.title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 8px; }
+
+.carousel-container2 span.caption {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300; }
