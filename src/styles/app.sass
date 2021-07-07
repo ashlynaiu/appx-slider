@@ -13,7 +13,7 @@ $break-small: 728px
 $background-color: rgba(white, 0.6)
 
 $grid-size: 500px
-$gap-size: 4rem
+$gap-size: 3rem
 /////////////////
 /////Resets/////
 ///////////////
@@ -138,20 +138,23 @@ table, button
 	display: grid
 	padding-top: 12px
 	grid-auto-flow: column
-	gap: calc(#{$gap-size} / 2) 
+	gap: $gap-size
 	margin: 0
-	scroll-behavior: smooth
-	overscroll-behavior-inline: contain
+	// scroll-behavior: smooth
+	// overscroll-behavior-inline: contain
 	padding-inline: $gap-size
-	scroll-padding-inline: $gap-size
+	scroll-padding-inline: calc(#{$gap-size} * 2)
 	padding-block-end: calc(#{$gap-size} / 2)
-	scroll-snap-type: inline mandatory
+	scroll-snap-type: x mandatory
 
 	figure
 		scroll-snap-align: start
 
 	li
 		display: inline-block
+
+		// &:first-child
+		// 	margin-left: calc((#{$gap-size} / 2))
 
 		&:last-of-type figure
 			position: relative
@@ -176,10 +179,12 @@ table, button
 
 	&:hover
 		transform: translateY(-10px)
+		a
+			color: #333333
 
 	img
 		inline-size: $grid-size
-    block-size: $grid-size
+    	block-size: $grid-size
 		margin-bottom: 16px
 		border-radius: 16px 16px 0 0
 		border-bottom: 1px solid #E5E5E5

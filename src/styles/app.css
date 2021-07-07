@@ -114,14 +114,12 @@ table, button {
   display: grid;
   padding-top: 12px;
   grid-auto-flow: column;
-  gap: calc(4rem / 2);
+  gap: 3rem;
   margin: 0;
-  scroll-behavior: smooth;
-  overscroll-behavior-inline: contain;
-  padding-inline: 4rem;
-  scroll-padding-inline: 4rem;
-  padding-block-end: calc(4rem / 2);
-  scroll-snap-type: inline mandatory; }
+  padding-inline: 3rem;
+  scroll-padding-inline: calc(3rem * 2);
+  padding-block-end: calc(3rem / 2);
+  scroll-snap-type: x mandatory; }
 
 .carousel2 figure {
   scroll-snap-align: start; }
@@ -135,10 +133,10 @@ table, button {
 .carousel2 li:last-of-type figure::after {
   content: "";
   position: absolute;
-  inline-size: 4rem;
+  inline-size: 3rem;
   block-size: 100%;
   inset-block-start: 0;
-  inset-inline-end: calc(4rem * -1); }
+  inset-inline-end: calc(3rem * -1); }
 
 .carousel-container2 {
   width: 500px;
@@ -152,6 +150,9 @@ table, button {
 
 .carousel-container2:hover {
   transform: translateY(-10px); }
+
+.carousel-container2:hover a {
+  color: #333333; }
 
 .carousel-container2 img {
   inline-size: 500px;
