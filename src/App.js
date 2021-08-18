@@ -8,9 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <div className="proto">
-          <Carousel1 />
-        </div>
+        <button class="sample-button">
+          Get it Now
+        </button>
         <div className="proto">
           <Carousel2 />
         </div>

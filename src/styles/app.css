@@ -45,6 +45,12 @@ p {
 table, button {
   color: #333333; }
 
+button {
+  padding: 8px 24px;
+  background-color: #0176D3;
+  border-radius: 4px;
+  color: #fff; }
+
 .app {
   margin: 0 auto;
   padding-top: 80px; }
@@ -112,20 +118,13 @@ table, button {
 
 .carousel2 {
   display: grid;
-  padding-top: 12px;
+  padding: 12px 0 24px 0;
   grid-auto-flow: column;
-  gap: 3rem;
+  grid-column-gap: 3rem;
   margin: 0;
-  padding-inline: 3rem;
-  scroll-padding-inline: calc(3rem * 2);
-  padding-block-end: calc(3rem / 2);
-  scroll-snap-type: x mandatory; }
-
-.carousel2 figure {
-  scroll-snap-align: start; }
-
-.carousel2 li {
-  display: inline-block; }
+  scroll-snap-type: x mandatory;
+  scroll-snap-align: start;
+  padding-inline: 3rem; }
 
 .carousel2 li:last-of-type figure {
   position: relative; }
@@ -138,7 +137,11 @@ table, button {
   inset-block-start: 0;
   inset-inline-end: calc(3rem * -1); }
 
+.carousel2 a {
+  scroll-snap-align: start; }
+
 .carousel-container2 {
+  scroll-snap-align: center;
   width: 500px;
   border-radius: 16px;
   box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08);
