@@ -7,13 +7,19 @@ $text-color-standard: #465046
 $secondary-text: #745486
 $main-link-color: #735991
 $background-color: #FFF
-$break-large: 1200px
-$break-medium: 964px
-$break-small: 728px
 $background-color: rgba(white, 0.6)
 
 $grid-size: 500px
-$gap-size: 3rem
+$gap-size: 2rem
+
+$page-max-width: 1440px
+$page-min-width: 280px
+
+
+/* mobile breakpoint is automatic */               
+$tablet: 768px
+$desktop: 1024px
+$wide-desktop: 1280px
 /////////////////
 /////Resets/////
 ///////////////
@@ -71,18 +77,19 @@ button
 .app
 	margin: 0 auto
 	padding-top: 80px
+	min-width: $page-min-width
 
 	//Up to small screen
-	@media only screen and (max-width: $break-medium - 1)
-		width: $break-small
+	@media only screen and (min-width: $tablet)
+		max-width: $tablet
 
 	//above small screen
-	@media only screen and (min-width: $break-medium)
-		width: $break-medium
+	@media only screen and (min-width: $desktop)
+		max-width: $desktop
 
 	//above medium screens
-	@media only screen and (min-width: $break-large)
-		width: $break-large
+	@media only screen and (min-width: $wide-desktop)
+		max-width: $wide-desktop
 
 .proto
 	padding-bottom: 128px
@@ -92,10 +99,18 @@ button
 ///////////////////////////
 .carousel-u
 	overflow-x: scroll
+	overflow-y: hidden
+	align-items: center
+	scroll-snap-type: x mandatory
 
+	@media only screen and (min-width: $page-min-width)
+		&::-webkit-scrollbar
+			display: none
+	@media only screen and (min-width: $tablet)
+		&::-webkit-scrollbar
+			display: inherit
 	&::-webkit-scrollbar
-		width: 7px
-		height: 6px
+		height: 8px
 
 	&::-webkit-scrollbar-track
 		margin: 0 20px
@@ -114,75 +129,65 @@ button
 /////////////////////
 /////Carousel 1/////
 ///////////////////
-.carousel1
-	display: flex
-	padding: 12px 8px 24px 8px
-	scroll-snap-type: x mandatory
-	scroll-snap-stop: always
-	overflow: scroll
+// .carousel1
+// 	display: flex
+// 	padding: 12px 8px 24px 8px
+// 	scroll-snap-type: x mandatory
+// 	scroll-snap-stop: always
+// 	overflow: scroll
 
-.carousel-container1
-	margin-right: 32px
-	max-width: 500px
-	border-radius: 16px
-	flex: 0 0 50%
-	box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08)
-	background: #fff
-	transition: transform .2s
-	scroll-snap-align: center
-	&:last-child
-		margin: 0
-	&:hover
-		transform: translateY(-10px)
-	img
-		width: auto
-		margin-bottom: 16px
-		border-radius: 16px 16px 0 0
-		border-bottom: 1px solid #E5E5E5
+// .carousel-container1
+// 	margin-right: 32px
+// 	max-width: 500px
+// 	border-radius: 16px
+// 	flex: 0 0 50%
+// 	box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08)
+// 	background: #fff
+// 	transition: transform .2s
+// 	scroll-snap-align: center
+// 	&:last-child
+// 		margin: 0
+// 	&:hover
+// 		transform: translateY(-10px)
+// 	img
+// 		width: auto
+// 		margin-bottom: 16px
+// 		border-radius: 16px 16px 0 0
+// 		border-bottom: 1px solid #E5E5E5
 
 /////////////////////
 /////Carousel 2/////
 ///////////////////
 .carousel2
 	display: grid
-	padding: 12px 0 24px 0
 	grid-auto-flow: column
 	grid-column-gap: $gap-size
-	margin: 0
-	scroll-snap-type: y mandatory
-	scroll-snap-align: start
 	padding-inline: $gap-size
 	scroll-padding-inline: calc(#{$gap-size} * 2)
-	// padding-block-end: calc(#{$gap-size} / 2)
-	li
+	padding-block-end: calc(#{$gap-size})
 
-		// &:first-child
-		// 	margin-left: calc((#{$gap-size} / 2))
-
-		&:last-of-type figure
-			position: relative
-
-			&::after
-				content: ""
-				position: absolute
-				inline-size: $gap-size
-				block-size: 100%
-				inset-block-start: 0
-				inset-inline-end: calc(#{$gap-size} * -1)
-
+	//Mobile
+	@media only screen and (min-width: $page-min-width)
+		margin: 0 16px	
+	@media only screen and (min-width: $tablet)
+		margin: 0
 .carousel-container2
-	scroll-snap-align: start
 	width: 500px
 	border-radius: 16px
-	box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08)
+	border: 1px solid rgba(24, 24, 24, 0.04)
+	box-shadow: 0px 2px 8px -2px rgba(24, 24, 24, 0.08), 0px 8px 12px -2px rgba(24, 24, 24, 0.16)
 	background: #fff
-	transition: transform .2s
+	scroll-snap-align: center
 
-	&:last-child
-		margin: 0
+	//Mobile
+	@media only screen and (min-width: $page-min-width)
+		width: (100vw - 16) 
+	@media only screen and (min-width: $tablet)
+		width: 500px
 
 	&:hover
-		transform: translateY(-10px)
+		transition: box-shadow .2s
+		box-shadow: 0px 12px 24px -4px rgba(24, 24, 24, 0.08), 0px 16px 32px -4px rgba(24, 24, 24, 0.16);
 		a
 			color: #333333
 

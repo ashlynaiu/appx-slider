@@ -3,10 +3,15 @@ import React, { Component } from 'react';
 
 class Carousel2 extends Component {
 
+//research list box
+//role="listbox"
+//enter or space to open up lightbox
+//role="option"
+//aria labels to indicate feature carousel 
   render() {
     return (
       <div>
-        <ul className="carousel-u carousel2" tabindex="0">
+        <ul className="carousel-u carousel2" tabindex="0" aria-orientation="horizontal" role="listbox" aria-roledescription="Featured solution screenshots">
             <li className="carousel-container2">
                 <figure>
                     <img src={require(`../images/1.jpg`)} alt="1" />

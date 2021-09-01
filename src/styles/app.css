@@ -1,3 +1,4 @@
+/* mobile breakpoint is automatic */
 #root {
   height: 100%; }
 
@@ -53,29 +54,40 @@ button {
 
 .app {
   margin: 0 auto;
-  padding-top: 80px; }
+  padding-top: 80px;
+  min-width: 280px; }
 
-@media only screen and (max-width: 963px) {
+@media only screen and (min-width: 768px) {
   .app {
-    width: 728px; } }
+    max-width: 768px; } }
 
-@media only screen and (min-width: 964px) {
+@media only screen and (min-width: 1024px) {
   .app {
-    width: 964px; } }
+    max-width: 1024px; } }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1280px) {
   .app {
-    width: 1200px; } }
+    max-width: 1280px; } }
 
 .proto {
   padding-bottom: 128px; }
 
 .carousel-u {
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  overflow-y: hidden;
+  align-items: center;
+  scroll-snap-type: x mandatory; }
+
+@media only screen and (min-width: 280px) {
+  .carousel-u::-webkit-scrollbar {
+    display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .carousel-u::-webkit-scrollbar {
+    display: inherit; } }
 
 .carousel-u::-webkit-scrollbar {
-  width: 7px;
-  height: 6px; }
+  height: 8px; }
 
 .carousel-u::-webkit-scrollbar-track {
   margin: 0 20px;
@@ -91,70 +103,41 @@ button {
 .img-text {
   padding: 0 24px 24px 24px; }
 
-.carousel1 {
-  display: flex;
-  padding: 12px 8px 24px 8px;
-  scroll-snap-type: x mandatory;
-  scroll-snap-stop: always;
-  overflow: scroll; }
-
-.carousel-container1 {
-  margin-right: 32px;
-  max-width: 500px;
-  border-radius: 16px;
-  flex: 0 0 50%;
-  box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08);
-  background: #fff;
-  transition: transform .2s;
-  scroll-snap-align: center; }
-
-.carousel-container1:last-child {
-  margin: 0; }
-
-.carousel-container1:hover {
-  transform: translateY(-10px); }
-
-.carousel-container1 img {
-  width: auto;
-  margin-bottom: 16px;
-  border-radius: 16px 16px 0 0;
-  border-bottom: 1px solid #E5E5E5; }
-
 .carousel2 {
   display: grid;
-  padding: 12px 0 24px 0;
   grid-auto-flow: column;
-  grid-column-gap: 3rem;
-  margin: 0;
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: start;
-  padding-inline: 3rem;
-  scroll-padding-inline: calc(3rem * 2); }
+  grid-column-gap: 2rem;
+  padding-inline: 2rem;
+  scroll-padding-inline: calc(2rem * 2);
+  padding-block-end: calc(2rem); }
 
-.carousel2 li:last-of-type figure {
-  position: relative; }
+@media only screen and (min-width: 280px) {
+  .carousel2 {
+    margin: 0 16px; } }
 
-.carousel2 li:last-of-type figure::after {
-  content: "";
-  position: absolute;
-  inline-size: 3rem;
-  block-size: 100%;
-  inset-block-start: 0;
-  inset-inline-end: calc(3rem * -1); }
+@media only screen and (min-width: 768px) {
+  .carousel2 {
+    margin: 0; } }
 
 .carousel-container2 {
-  scroll-snap-align: start;
   width: 500px;
   border-radius: 16px;
-  box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08);
+  border: 1px solid rgba(24, 24, 24, 0.04);
+  box-shadow: 0px 2px 8px -2px rgba(24, 24, 24, 0.08), 0px 8px 12px -2px rgba(24, 24, 24, 0.16);
   background: #fff;
-  transition: transform .2s; }
+  scroll-snap-align: center; }
 
-.carousel-container2:last-child {
-  margin: 0; }
+@media only screen and (min-width: 280px) {
+  .carousel-container2 {
+    width: 84vw; } }
+
+@media only screen and (min-width: 768px) {
+  .carousel-container2 {
+    width: 500px; } }
 
 .carousel-container2:hover {
-  transform: translateY(-10px); }
+  transition: box-shadow .2s;
+  box-shadow: 0px 12px 24px -4px rgba(24, 24, 24, 0.08), 0px 16px 32px -4px rgba(24, 24, 24, 0.16); }
 
 .carousel-container2:hover a {
   color: #333333; }

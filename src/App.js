@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="app">
         <div className="proto">
-          <Carousel1 />
+          {/* <Carousel1 /> */}
           <Carousel2 />
         </div>
       </div>
