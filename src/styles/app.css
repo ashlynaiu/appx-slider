@@ -93,7 +93,10 @@ button {
 
 .carousel1 {
   display: flex;
-  padding: 12px 8px 24px 8px; }
+  padding: 12px 8px 24px 8px;
+  scroll-snap-type: x mandatory;
+  scroll-snap-stop: always;
+  overflow: scroll; }
 
 .carousel-container1 {
   margin-right: 32px;
@@ -102,7 +105,8 @@ button {
   flex: 0 0 50%;
   box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08);
   background: #fff;
-  transition: transform .2s; }
+  transition: transform .2s;
+  scroll-snap-align: center; }
 
 .carousel-container1:last-child {
   margin: 0; }
@@ -122,9 +126,10 @@ button {
   grid-auto-flow: column;
   grid-column-gap: 3rem;
   margin: 0;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: y mandatory;
   scroll-snap-align: start;
-  padding-inline: 3rem; }
+  padding-inline: 3rem;
+  scroll-padding-inline: calc(3rem * 2); }
 
 .carousel2 li:last-of-type figure {
   position: relative; }
@@ -137,11 +142,8 @@ button {
   inset-block-start: 0;
   inset-inline-end: calc(3rem * -1); }
 
-.carousel2 a {
-  scroll-snap-align: start; }
-
 .carousel-container2 {
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   width: 500px;
   border-radius: 16px;
   box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08);

@@ -8,10 +8,8 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <button class="sample-button">
-          Get it Now
-        </button>
         <div className="proto">
+          <Carousel1 />
           <Carousel2 />
         </div>
       </div>
