@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 
 class slide extends Component {
   render() {
-    const info = this.props.item;
+    const info = this.props.item
+    const handleDialogData = this.props.handleDialogData
+
     return (
-      <li className="carousel-container2">
+      <li className="carousel-container2" onClick={() => handleDialogData(info.id)}>
         <figure>
           <img src={require(`../images/${info.name}.jpg`)} alt={info.name} />
           <figcaption>

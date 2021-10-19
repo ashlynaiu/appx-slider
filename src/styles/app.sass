@@ -4,8 +4,7 @@
 $desktop-padding: 20px
 $frame-desktop: 820px
 $text-color-standard: #465046
-$secondary-text: #745486
-$main-link-color: #735991
+$brand-blue: #0176D3
 $background-color: #FFF
 $background-color: rgba(white, 0.6)
 
@@ -126,34 +125,26 @@ button
 .img-text
 	padding: 0 24px 24px 24px
 
-/////////////////////
-/////Carousel 1/////
-///////////////////
-// .carousel1
-// 	display: flex
-// 	padding: 12px 8px 24px 8px
-// 	scroll-snap-type: x mandatory
-// 	scroll-snap-stop: always
-// 	overflow: scroll
+figure
+	img
+		border-bottom: 1px solid #E5E5E5
+		object-fit: cover
+		margin-bottom: 16px
+		border-radius: 16px 16px 0 0
+		overflow: hidden
+	figcaption
+		padding: 0 24px 24px 24px
 
-// .carousel-container1
-// 	margin-right: 32px
-// 	max-width: 500px
-// 	border-radius: 16px
-// 	flex: 0 0 50%
-// 	box-shadow: 0 2px 8px 2px rgba(24, 24, 24, 0.08)
-// 	background: #fff
-// 	transition: transform .2s
-// 	scroll-snap-align: center
-// 	&:last-child
-// 		margin: 0
-// 	&:hover
-// 		transform: translateY(-10px)
-// 	img
-// 		width: auto
-// 		margin-bottom: 16px
-// 		border-radius: 16px 16px 0 0
-// 		border-bottom: 1px solid #E5E5E5
+	span
+		display: block
+		&.title
+			font-size: 20px
+			font-weight: bold
+			padding-bottom: 8px
+		&.caption
+			font-size: 16px
+			line-height: 24px
+			font-weight: 300
 
 /////////////////////
 /////Carousel 2/////
@@ -171,6 +162,7 @@ button
 		margin: 0 16px	
 	@media only screen and (min-width: $tablet)
 		margin: 0
+
 .carousel-container2
 	width: 500px
 	border-radius: 16px
@@ -194,23 +186,60 @@ button
 	img
 		inline-size: $grid-size
     	block-size: $grid-size
-		margin-bottom: 16px
-		border-radius: 16px 16px 0 0
-		border-bottom: 1px solid #E5E5E5
 		inline-size: 100%
 		block-size: 100%
-		object-fit: cover
 
-	figcaption
-		padding: 0 24px 24px 24px
+///////////////////
+/////Lightbox/////
+/////////////////
+.lightbox-background
+	position: absolute
+	z-index: 5
+	top: 0
+	right: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(255, 255, 255, 0.6)
+	padding-top: 128px
 
-	span
-		display: block
-		&.title
-			font-size: 20px
-			font-weight: bold
-			padding-bottom: 8px
-		&.caption
-			font-size: 16px
-			line-height: 24px
-			font-weight: 300
+.lightbox
+	position: relative
+	height: auto
+	width: 800px
+	z-index: 10
+	background-color: #fff
+	margin: 0 auto
+	border-radius: 16px
+	border: 1px solid rgba(24, 24, 24, 0.04)
+	box-shadow: 0px 12px 24px -4px rgba(24, 24, 24, 0.08), 0px 16px 32px -4px rgba(24, 24, 24, 0.16);
+
+	.slds-button
+		margin: 0
+
+	button
+		svg
+			fill: $brand-blue
+
+button.close
+	position: absolute
+	top: -36px
+	right: 0
+
+button.forward
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	right: -64px
+	width: 3rem
+	height: 3rem
+	border: 2px solid $brand-blue
+
+button.back
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -64px
+	width: 3rem
+	height: 3rem
+	border: 2px solid $brand-blue
