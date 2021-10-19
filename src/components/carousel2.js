@@ -16,6 +16,7 @@ class Carousel2 extends Component {
   }
 
   handleDialog() {
+    //Don't allow carousel on mobile
     if(window.innerWidth > 1000) {
       return this.setState({showDialog: !this.state.showDialog })
     }
