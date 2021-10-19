@@ -24,7 +24,22 @@ class Carousel2 extends Component {
       this.setState({ dialogKey: key});
       this.handleDialog()
     }
+    //Need clean up
+    else {
+      let newKey = key
+      if (key > this.state.items.length) {
+        newKey = 0
+      }
+      else if (key <= 0) {
+        newKey = this.state.items.length - 1
+      }
+      else {
+        newKey = key - 1
+      }
+      this.setState({ dialogKey: newKey});
+    }
   }
+
 //ACCESSIBILITY NOTES
 //research list box
 //role="listbox"
@@ -47,7 +62,7 @@ class Carousel2 extends Component {
           )
         }
         </ul>
-        {this.state.showDialog ? <Lightbox item={items[this.state.dialogKey]} handleDialog={this.handleDialog} /> : null}
+        {this.state.showDialog ? <Lightbox item={items[this.state.dialogKey]} handleDialog={this.handleDialog} handleDialogData={this.handleDialogData} /> : null}
       </div>
     );
   }
