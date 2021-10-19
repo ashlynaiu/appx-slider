@@ -1,4 +1,4 @@
-## Relationship Map Prototype
+## AppX Slider
 
 ## Run Locally
 ```
