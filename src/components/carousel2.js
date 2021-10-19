@@ -16,7 +16,9 @@ class Carousel2 extends Component {
   }
 
   handleDialog() {
-    this.setState({showDialog: !this.state.showDialog })
+    if(window.innerWidth > 1000) {
+      return this.setState({showDialog: !this.state.showDialog })
+    }
   }
 
   handleDialogData(key) {
