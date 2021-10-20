@@ -2,14 +2,30 @@ import React, { Component } from 'react';
 import Icon from './icon';
 
 class Lightbox extends Component {
+  //Component Initalizes
+  componentWillMount() {
+    document.addEventListener('mousedown', this.handleClick, false);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClick);
+  }
+
+  handleClick = (event) => {
+    if (this.node.contains(event.target)) {
+      return;
+    }
+    this.props.handleDialog()
+  }
 
   render() {
     const info = this.props.item
     let forwardKey = parseInt(info.name) + 1
     let backwardKey = parseInt(info.name) - 1
+
     return (
         <div className="lightbox-background">
-          <div className="lightbox">
+          <div className="lightbox" ref={node => this.node = node }>
             <button className="slds-button slds-button_icon close" title="Close" onClick={this.props.handleDialog}>
               <Icon type="utility" object="close" />
               <span className="slds-assistive-text">Close</span>
