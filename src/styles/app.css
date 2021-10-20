@@ -26,10 +26,12 @@ body {
 
 a {
   color: #3e3e3c; }
-  a img {
-    outline-color: none; }
-  a:hover {
-    text-decoration: none; }
+
+a img {
+  outline-color: none; }
+
+a:hover {
+  text-decoration: none; }
 
 h3 {
   font-size: 20px;
@@ -54,15 +56,18 @@ button {
   margin: 0 auto;
   padding-top: 80px;
   min-width: 280px; }
-  @media only screen and (min-width: 768px) {
-    .app {
-      max-width: 768px; } }
-  @media only screen and (min-width: 1024px) {
-    .app {
-      max-width: 1024px; } }
-  @media only screen and (min-width: 1280px) {
-    .app {
-      max-width: 1280px; } }
+
+@media only screen and (min-width: 768px) {
+  .app {
+    max-width: 768px; } }
+
+@media only screen and (min-width: 1024px) {
+  .app {
+    max-width: 1024px; } }
+
+@media only screen and (min-width: 1280px) {
+  .app {
+    max-width: 1280px; } }
 
 .proto {
   padding-bottom: 128px; }
@@ -72,23 +77,28 @@ button {
   overflow-y: hidden;
   align-items: center;
   scroll-snap-type: x mandatory; }
-  @media only screen and (min-width: 280px) {
-    .carousel-u::-webkit-scrollbar {
-      display: none; } }
-  @media only screen and (min-width: 768px) {
-    .carousel-u::-webkit-scrollbar {
-      display: inherit; } }
+
+@media only screen and (min-width: 280px) {
   .carousel-u::-webkit-scrollbar {
-    height: 8px; }
-  .carousel-u::-webkit-scrollbar-track {
-    margin: 0 20px;
-    background-color: #eee;
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 5px #eee;
-    box-shadow: inset 0 0 5px #eee; }
-  .carousel-u::-webkit-scrollbar-thumb {
-    background: #0070D2;
-    border-radius: 10px; }
+    display: none; } }
+
+@media only screen and (min-width: 768px) {
+  .carousel-u::-webkit-scrollbar {
+    display: inherit; } }
+
+.carousel-u::-webkit-scrollbar {
+  height: 8px; }
+
+.carousel-u::-webkit-scrollbar-track {
+  margin: 0 20px;
+  background-color: #eee;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px #eee;
+  box-shadow: inset 0 0 5px #eee; }
+
+.carousel-u::-webkit-scrollbar-thumb {
+  background: #0070D2;
+  border-radius: 10px; }
 
 .img-text {
   padding: 0 24px 24px 24px; }
@@ -105,14 +115,16 @@ figure figcaption {
 
 figure span {
   display: block; }
-  figure span.title {
-    font-size: 20px;
-    font-weight: bold;
-    padding-bottom: 8px; }
-  figure span.caption {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 300; }
+
+figure span.title {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 8px; }
+
+figure span.caption {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300; }
 
 .carousel2 {
   display: grid;
@@ -121,12 +133,14 @@ figure span {
   padding-inline: 2rem;
   scroll-padding-inline: calc(2rem * 2);
   padding-block-end: calc(2rem); }
-  @media only screen and (min-width: 280px) {
-    .carousel2 {
-      margin: 0 16px; } }
-  @media only screen and (min-width: 768px) {
-    .carousel2 {
-      margin: 0; } }
+
+@media only screen and (min-width: 280px) {
+  .carousel2 {
+    margin: 0 16px; } }
+
+@media only screen and (min-width: 768px) {
+  .carousel2 {
+    margin: 0; } }
 
 .carousel-container2 {
   width: 500px;
@@ -136,22 +150,27 @@ figure span {
   background: #fff;
   scroll-snap-align: center;
   cursor: pointer; }
-  @media only screen and (min-width: 280px) {
-    .carousel-container2 {
-      width: 84vw; } }
-  @media only screen and (min-width: 768px) {
-    .carousel-container2 {
-      width: 500px; } }
-  .carousel-container2:hover {
-    transition: box-shadow .2s;
-    box-shadow: 0px 12px 24px -4px rgba(24, 24, 24, 0.08), 0px 16px 32px -4px rgba(24, 24, 24, 0.16); }
-    .carousel-container2:hover a {
-      color: #333333; }
-  .carousel-container2 img {
-    inline-size: 500px;
-      inline-size-block-size: 500px;
-    inline-size: 100%;
-    block-size: 100%; }
+
+@media only screen and (min-width: 280px) {
+  .carousel-container2 {
+    width: 84vw; } }
+
+@media only screen and (min-width: 768px) {
+  .carousel-container2 {
+    width: 500px; } }
+
+.carousel-container2:hover {
+  transition: box-shadow .2s;
+  box-shadow: 0px 12px 24px -4px rgba(24, 24, 24, 0.08), 0px 16px 32px -4px rgba(24, 24, 24, 0.16); }
+
+.carousel-container2:hover a {
+  color: #333333; }
+
+.carousel-container2 img {
+  inline-size: 500px;
+  inline-size-block-size: 500px;
+  inline-size: 100%;
+  block-size: 100%; }
 
 .lightbox-background {
   position: absolute;
@@ -161,7 +180,7 @@ figure span {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
   padding-top: 128px; }
 
 .lightbox {
@@ -174,33 +193,63 @@ figure span {
   border-radius: 16px;
   border: 1px solid rgba(24, 24, 24, 0.04);
   box-shadow: 0px 12px 24px -4px rgba(24, 24, 24, 0.08), 0px 16px 32px -4px rgba(24, 24, 24, 0.16); }
-  @media only screen and (min-width: 280px) {
-    .lightbox {
-      width: 75%; } }
-  .lightbox .slds-button {
-    margin: 0; }
-  .lightbox button svg {
-    fill: #0176D3; }
+
+@media only screen and (min-width: 280px) {
+  .lightbox {
+    width: 75%; } }
+
+.lightbox .slds-button {
+  margin: 0; }
 
 button.close {
   position: absolute;
-  top: -36px;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #0176D3;
+  top: -56px;
   right: 0; }
+
+button.close:hover {
+  border: 2px solid #0B5CAB; }
+
+button.close:hover svg {
+  fill: #0B5CAB; }
+
+button.close svg {
+  fill: #0176D3; }
 
 button.forward {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -64px;
   width: 3rem;
   height: 3rem;
-  border: 2px solid #0176D3; }
+  border: 2px solid #0176D3;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -64px; }
+
+button.forward:hover {
+  border: 2px solid #0B5CAB; }
+
+button.forward:hover svg {
+  fill: #0B5CAB; }
+
+button.forward svg {
+  fill: #0176D3; }
 
 button.back {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -64px;
   width: 3rem;
   height: 3rem;
-  border: 2px solid #0176D3; }
+  border: 2px solid #0176D3;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -64px; }
+
+button.back:hover {
+  border: 2px solid #0B5CAB; }
+
+button.back:hover svg {
+  fill: #0B5CAB; }
+
+button.back svg {
+  fill: #0176D3; }

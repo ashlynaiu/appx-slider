@@ -26,8 +26,8 @@ class Lightbox extends Component {
     return (
         <div className="lightbox-background">
           <div className="lightbox" ref={node => this.node = node }>
-            <button className="slds-button slds-button_icon close" title="Close" onClick={this.props.handleDialog}>
-              <Icon type="utility" object="close" />
+            <button className="slds-button slds-button_icon slds-button_icon-border-filled close" aria-pressed="false" title="Close" onClick={this.props.handleDialog}>
+              <Icon type="utility" object="close" size="small" />
               <span className="slds-assistive-text">Close</span>
             </button>
             <button className="slds-button slds-button_icon slds-button_icon-border-filled forward" aria-pressed="false" title="Forward" onClick={() =>this.props.handleDialogData(forwardKey)}>
