@@ -16,29 +16,36 @@ class Carousel2 extends Component {
   }
 
   handleDialog() {
-    //Don't allow carousel on mobile
+    //Don't allow lightbox on mobile
     if(window.innerWidth > 1000) {
       return this.setState({showDialog: !this.state.showDialog })
     }
   }
 
   handleDialogData(key) {
+    //Open dialog with key
     if(!this.state.showDialog) {
       this.setState({ dialogKey: key});
       this.handleDialog()
     }
-    //Need clean up
+
+    //Dialog is open, switch the key
     else {
+      let items = this.state.items
       let newKey = key
-      if (key > this.state.items.length) {
+      //End of array, go to first
+      if (key > items.length) {
         newKey = 0
       }
+      //Start of array, go to last item
       else if (key <= 0) {
-        newKey = this.state.items.length - 1
+        newKey = items.length - 1
       }
+      //Advance to next or previous
       else {
         newKey = key - 1
       }
+      //Set new state of key
       this.setState({ dialogKey: newKey});
     }
   }
