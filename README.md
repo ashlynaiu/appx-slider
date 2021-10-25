@@ -4,3 +4,7 @@
 ```
 npm install
 npm start
+```
+
+## See it in Action
+https://appx-slider.herokuapp.com/
