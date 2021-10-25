@@ -71,6 +71,28 @@ class Carousel2 extends Component {
               handleDialogData={this.handleDialogData} />
           )
         }
+          <li className="carousel-container2 video">
+            <figure>
+              <div className="content-video">
+                <iframe title="Geopointe mocked YouTube video content" src="https://www.youtube-nocookie.com/embed/_EYJaA1TdGg?start=3" frameborder="0" allowtransparency="true" scrolling="false" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"></iframe>
+              </div>
+              <figcaption>
+                <span className="title">Video Title</span>
+                <span className="caption">Geopointe mocked YouTube video content</span>
+              </figcaption>
+            </figure>
+          </li>
+          <li className="carousel-container2 video">
+            <figure>
+              <div className="content-video">
+              <iframe title="Geopointe mocked Vidyard video content" src="https://play.vidyard.com/1far7Y5f3yobSaN7Bhx9uV?autoplay=0" frameborder="0" allowtransparency="true" scrolling="false" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true"></iframe>
+              </div>
+              <figcaption>
+                <span className="title">Video Title</span>
+                <span className="caption">Geopointe mocked Vimeo video content</span>
+              </figcaption>
+            </figure>
+          </li>
         </ul>
         {this.state.showDialog ? <Lightbox item={items[this.state.dialogKey]} handleDialog={this.handleDialog} handleDialogData={this.handleDialogData} /> : null}
       </div>

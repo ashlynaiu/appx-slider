@@ -146,10 +146,15 @@ figure
 			font-size: 16px
 			line-height: 24px
 			font-weight: 300
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		border-bottom: 1px solid #E5E5E5
+		border-radius: 16px 16px 0 0
 
-/////////////////////
-/////Carousel 2/////
-///////////////////
 .carousel2
 	display: grid
 	grid-auto-flow: column
@@ -163,6 +168,9 @@ figure
 		margin: 0 16px	
 	@media only screen and (min-width: $tablet)
 		margin: 0
+
+	li
+		height: 100%
 
 .carousel-container2
 	width: 500px
@@ -190,6 +198,13 @@ figure
     	block-size: $grid-size
 		inline-size: 100%
 		block-size: 100%
+	
+	.content-video
+		position: relative
+		width: 100%
+		height: 0
+		padding-top: 67%
+		margin-bottom: 16px
 
 ///////////////////
 /////Lightbox/////
