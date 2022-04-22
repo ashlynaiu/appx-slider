@@ -16,5 +16,17 @@ export default [
         name: "3",
         title: "Flexible to fit any solution",
         caption: "Pull data from across Salesforce objects, orgs, and external systems - like ERP, Marketing, and HR. This creates customized, personalized, and on time reports and documents with delivery-ease for every scenario."
+    },
+    {
+        id: 3,
+        name: "9",
+        title: "Flexible to fit any solution",
+        caption: "Pull data from across Salesforce objects, orgs, and external systems - like ERP, Marketing, and HR. This creates customized, personalized, and on time reports and documents with delivery-ease for every scenario."
+    },
+    {
+        id: 3,
+        name: "10",
+        title: "Flexible to fit any solution",
+        caption: "Pull data from across Salesforce objects, orgs, and external systems - like ERP, Marketing, and HR. This creates customized, personalized, and on time reports and documents with delivery-ease for every scenario."
     }
 ]

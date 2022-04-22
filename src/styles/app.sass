@@ -127,12 +127,6 @@ button
 	padding: 0 24px 24px 24px
 
 figure
-	img
-		border-bottom: 1px solid #E5E5E5
-		object-fit: cover
-		margin-bottom: 16px
-		border-radius: 16px 16px 0 0
-		overflow: hidden
 	figcaption
 		padding: 0 24px 24px 24px
 
@@ -194,11 +188,20 @@ figure
 			color: #333333
 
 	img
-		inline-size: $grid-size
-    	block-size: $grid-size
-		inline-size: 100%
-		block-size: 100%
+		object-fit: contain
+		height: 100%
 	
+	.content-image
+		border-bottom: 1px solid #E5E5E5
+		margin-bottom: 16px
+		border-radius: 16px 16px 0 0
+		overflow: hidden
+		height: 333px
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+
 	.content-video
 		position: relative
 		width: 100%
@@ -236,6 +239,13 @@ figure
 
 	.slds-button
 		margin: 0
+
+	.content-image-model
+		display: flex
+		justify-content: center
+		align-items: center
+		border-radius: 16px 16px 0 0
+		overflow: hidden
 
 @mixin lightboxBorderButtons
 	position: absolute

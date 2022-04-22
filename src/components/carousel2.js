@@ -50,13 +50,6 @@ class Carousel2 extends Component {
     }
   }
 
-//ACCESSIBILITY NOTES
-//research list box
-//role="listbox"
-//enter or space to open up lightbox
-//role="option"
-//aria labels to indicate feature carousel 
-
   render() {
     let items = {...this.state.items}
     return (

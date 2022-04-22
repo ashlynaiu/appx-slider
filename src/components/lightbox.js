@@ -39,7 +39,9 @@ class Lightbox extends Component {
               <span className="slds-assistive-text">Back</span>
             </button>
             <figure>
-              <img src={require(`../images/${info.name}.jpg`)} alt={info.name} />
+              <div className="content-image-model">
+                <img src={require(`../images/${info.name}.jpg`)} alt={info.name} />
+              </div>
               <figcaption>
                 <span className="title">{info.title}</span>
                 <span className="caption">{info.caption}</span>

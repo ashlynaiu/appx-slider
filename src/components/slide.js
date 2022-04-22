@@ -8,7 +8,9 @@ class slide extends Component {
     return (
       <li className="carousel-container2" onClick={() => handleDialogData(info.id)}>
         <figure>
-          <img src={require(`../images/${info.name}.jpg`)} alt={info.name} />
+          <div className="content-image">
+            <img src={require(`../images/${info.name}.jpg`)} alt={info.name} />
+          </div>
           <figcaption>
             <span className="title">{info.title}</span>
             <span className="caption">{info.caption}</span>
