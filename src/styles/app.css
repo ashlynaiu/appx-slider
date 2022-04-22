@@ -171,7 +171,7 @@ figure iframe {
 .carousel-container2:hover a {
   color: #333333; }
 
-.carousel-container2 img {
+.carousel-container2 figure img {
   object-fit: contain;
   height: 100%; }
 

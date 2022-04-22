@@ -2,6 +2,9 @@
   "name": "appExchange-slider",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "14.18.x"
+  }
   "dependencies": {
     "@salesforce-ux/design-system": "^2.16.2",
     "history": "^4.9.0",
